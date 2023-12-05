@@ -6,9 +6,20 @@ class MoviesController < ApplicationController
     @movies = Movie.all
   end
   def search
+    if params[:title_search].present?
+      @movies = Movie.where('title LIKE ?', "%#{params[:title_search]}%")
+      @movies_count =@movies.count
+    else
+      @movies = [] # 만약 title_search속 string와 일치하는 항목이 조회 안될 경우 빈 array를 담는다.
+      @movies_count='' # 조회 안될땐 아예 0도 표시 안하는 용도
+    end
+    
     respond_to do |format|
       format.turbo_stream do
-        render turbo_stream: turbo_stream.update("search_results", params[:title_search],Time.zone.now)
+        #render turbo_stream: turbo_stream.update("search_results", @movies.count)
+        render turbo_stream: turbo_stream.update("search_results", 
+                                                  partial: "movies/search_results", locals: {movies: @movies, counts: @movies_count})
+        #render turbo_stream: turbo_stream.update("search_results", params[:title_search],Time.zone.now)
         # 터보스트림을통해 id="search_results" 요소로 params[:title_search] 즉 , submit한 요소를 보낸다.
       end
     end
