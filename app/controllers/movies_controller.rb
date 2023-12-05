@@ -7,7 +7,7 @@ class MoviesController < ApplicationController
   end
   def search
     if params[:title_search].present?
-      @movies = Movie.where('title LIKE ?', "%#{params[:title_search]}%")
+      @movies = Movie.filter_by_title(params[:title_search])
       @movies_count =@movies.count
     else
       @movies = [] # 만약 title_search속 string와 일치하는 항목이 조회 안될 경우 빈 array를 담는다.
