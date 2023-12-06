@@ -1,3 +1,18 @@
+<%# <div data-controller ="debounce"></div> %>
+  <%# data-controller 가 이 div가 controller를 향한다는 것을 의미하고 뒤의 "debounce"는 해당 js파일명을 의미 %>
+  <%# 이 경우엔 debounce_controller.js에 이 html요소를 할당함%>
+  <%# data-controller 는 해당요소에 특정 controller.js를 할당하기위한 용도 %>
+
+<%= form_with url: search_movies_path, method: :post, data:{controller: "debounce", debounce_target:"form"} do |form| %>
+  <%= form.search_field :title_search, data: {action: "input -> debounce#search" } %>
+<% end %>
+<!--
+data 속성을 사용하여 Stimulus.js에 필요한 정보(이 html을 할당함)를 전달합니다.
+controller: "debounce"는 해당 폼에 적용될 Stimulus 컨트롤러의 이름(debounce_controller.js)을 나타냅니다.
+debounce_target: "form"은 디바운싱을 적용할 대상을 나타냅니다. 이 경우, form을 지정하여 폼 전체(form_with)에서 디바운싱을 수행하도록 지정했습니다.
+-->
+
+<!--
 <%= form_with url: search_movies_path, method: :post do |form| %>
   <%= form.search_field :title_search, oninput: "this.form.requestSubmit()" %>
   <%# 엔터치면 submit을 개선시키기 위해서 oninput: "this.form.requestSubmit()" %>
@@ -7,3 +22,4 @@
   requestSubmit(): 폼을 제출합니다. 이 메서드는 사용자가 엔터 키를 누르거나 submit 버튼을 클릭하지 않고도 폼을 제출할 수 있게 해줍니다. %>
 
 <% end %>
+-->
