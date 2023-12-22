@@ -1,3 +1,13 @@
+![image](https://github.com/twingay96/movie_searching/assets/64403357/39a14060-6562-421d-8905-a9e1ca6f1053)![image](https://github.com/twingay96/movie_searching/assets/64403357/ad9dd2da-404d-47d6-b539-a00dc1033e64)
+
+Faker::Movie.unique.title 코드는 Ruby의 Faker 라이브러리를 사용하여 고유한 영화 제목을 생성합니다. Faker는 테스트 데이터를 생성할 때 유용한 라이브러리로, 다양한 가짜 데이터를 쉽게 만들 수 있게 해줍니다.
+
+Faker::Movie는 영화와 관련된 데이터를 생성하는 데 사용되는 Faker의 네임스페이스입니다. 여기서 unique 메소드는 중복되지 않는 값을 보장하며, title 메소드는 영화 제목을 생성합니다. 따라서 이 코드는 데이터베이스 시딩 과정에서 150개의 고유한 영화 제목을 생성하여 Movie 모델에 저장하는 데 사용됩니다. 이러한 방식으로 실제 데이터를 사용하기 전에 테스트 목적으로 데이터베이스를 채울 수 있습니다.
+
+    rails g scaffold movies
+    
+실행 후 :
+
 ![image](https://github.com/twingay96/movie_searching/assets/64403357/33b58dde-69e2-4651-9cd0-fce1f13a50ed)![image](https://github.com/twingay96/movie_searching/assets/64403357/7cde6574-9182-439b-a4c5-a02357758fb2)
 
 
