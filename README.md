@@ -8,9 +8,6 @@ Faker::Movie는 영화와 관련된 데이터를 생성하는 데 사용되는 F
     
 실행 후 :
 
-![image](https://github.com/twingay96/movie_searching/assets/64403357/33b58dde-69e2-4651-9cd0-fce1f13a50ed)![image](https://github.com/twingay96/movie_searching/assets/64403357/7cde6574-9182-439b-a4c5-a02357758fb2)
-
-
 "_search_form.html.erb" :
 
 ![image](https://github.com/twingay96/movie_searching/assets/64403357/c64b19d0-6433-4970-9511-b6c0a475c91b)
