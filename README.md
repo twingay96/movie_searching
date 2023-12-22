@@ -1,4 +1,4 @@
-![image](https://github.com/twingay96/movie_searching/assets/64403357/39a14060-6562-421d-8905-a9e1ca6f1053)![image](https://github.com/twingay96/movie_searching/assets/64403357/ad9dd2da-404d-47d6-b539-a00dc1033e64)
+![image](https://github.com/twingay96/movie_searching/assets/64403357/39a14060-6562-421d-8905-a9e1ca6f1053)![image]
 
 Faker::Movie.unique.title 코드는 Ruby의 Faker 라이브러리를 사용하여 고유한 영화 제목을 생성합니다. Faker는 테스트 데이터를 생성할 때 유용한 라이브러리로, 다양한 가짜 데이터를 쉽게 만들 수 있게 해줍니다.
 
